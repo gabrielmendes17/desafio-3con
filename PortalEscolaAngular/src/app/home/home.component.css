@@ -1,0 +1,13 @@
+.apresentacao {
+    margin-top: 10%;
+}
+
+.mensagens{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 2px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.77);
+    box-shadow: 3px 2px 5px rgba(50, 50, 50, 0.77);
+}

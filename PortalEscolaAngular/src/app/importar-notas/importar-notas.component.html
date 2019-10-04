@@ -1,0 +1,21 @@
+<div class="mensagens">
+  <form [formGroup]="form" novalidate >
+    <mat-card>Importar Notas</mat-card>
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="col-lg-8">
+            <div class="custom-file">
+                <input #inputFile type="file" class="custom-file-input" id="customFile"
+                    formControlName="arquivo" lang="pt" (change)="onChangeFile($event)">
+            </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="enviarArquivo()" type="submit">Importar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
