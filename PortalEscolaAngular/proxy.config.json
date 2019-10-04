@@ -3,20 +3,7 @@
     "target": {
       "host": "localhost",
       "protocol": "https:",
-      "port": 8443
-    },
-    "secure": false,
-    "changeOrigin": true,
-    "logLevel": "info"
-  },
-  "/cns-node/*": {
-    "target": {
-      "host": "localhost",
-      "protocol": "http:",
-      "port": 3000
-    },
-    "secure": false,
-    "changeOrigin": true,
-    "logLevel": "info"
+      "port": 8080
+    }
   }
 }
