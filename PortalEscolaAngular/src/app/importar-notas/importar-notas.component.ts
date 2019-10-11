@@ -1,8 +1,7 @@
 import { API_JAVA } from './../app.api';
-import { HttpUtilService } from './../services/http-util.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 
 @Component({
@@ -34,6 +33,14 @@ export class ImportarNotasComponent implements OnInit {
     console.log(event);
     this.inputFile = event.target.files[0];
     this.extensaoArquivoValido();
+  }
+
+  teste(extensao) {
+    if (extensao === 'xls') {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   extensaoArquivoValido(): boolean {

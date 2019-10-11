@@ -34,14 +34,14 @@ export class TableComponent implements OnInit {
   hasUnitNumber = false;
 
   ngOnInit() {
-    this.consultaNotasAlunos(null);
+    this.consultaNotasAlunos();
     this.pupolarCombo();
     console.log(this.form);
     this.dataSource.paginator = this.paginator;
     this.form.valueChanges.subscribe(c => console.log(c));
   }
 
-  consultaNotasAlunos($event) {
+  consultaNotasAlunos() {
     this.preparefilter();
     const notasAlunos = this.http.get(`${API_JAVA}recuperarNotasAula?ano=${this.ano.value}&nome=${this.nome.value}`);
     notasAlunos.subscribe(items => this.dataSource.data = this.convertToDataTableObject(items));
@@ -99,7 +99,7 @@ export class TableComponent implements OnInit {
   }
 
   onSubmit() {
-    this.consultaNotasAlunos(null);
+    this.consultaNotasAlunos();
   }
 
   get ano() {

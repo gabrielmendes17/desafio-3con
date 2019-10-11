@@ -1,5 +1,4 @@
 import { HomeComponent } from './home/home.component';
-import { HttpUtilService } from './services/http-util.service';
 import { ApplicationErrorHandler } from './app.error-handler';
 import { ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,9 +6,9 @@ import { NgModule } from '@angular/core';
 
 import { LOCALE_ID } from '@angular/core';
 import { MatButtonModule, MatCheckboxModule, MatListModule, MatCardModule, MatSidenavModule,
- MatAutocompleteModule, MatFormField,  MatDatepickerModule,
+ MatAutocompleteModule, MatDatepickerModule,
   MatNativeDateModule, MatMenuModule, MatIconModule, MatExpansionModule, MatDialogModule,
-   MatGridListModule, MatProgressSpinnerModule, MatSnackBarModule, MatTooltipModule } from '@angular/material';
+   MatProgressSpinnerModule, MatSnackBarModule, MatTooltipModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ImportarNotasComponent } from './importar-notas/importar-notas.component';
+import { TesteComponent } from './teste/teste.component';
 
 @NgModule({
   declarations: [
@@ -30,17 +30,12 @@ import { ImportarNotasComponent } from './importar-notas/importar-notas.componen
     TableComponent,
     MenuComponent,
     ImportarNotasComponent,
-    HomeComponent
+    HomeComponent,
+    TesteComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
-    MatSelectModule,
     MatFormFieldModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -53,7 +48,6 @@ import { ImportarNotasComponent } from './importar-notas/importar-notas.componen
     MatAutocompleteModule,
     MatInputModule,
     MatSelectModule,
-    HttpClientModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatMenuModule,
@@ -64,8 +58,6 @@ import { ImportarNotasComponent } from './importar-notas/importar-notas.componen
     MatDialogModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-    BrowserAnimationsModule,
-    MatListModule,
     MatTooltipModule,
     MatRadioModule,
     ReactiveFormsModule,
@@ -78,7 +70,7 @@ import { ImportarNotasComponent } from './importar-notas/importar-notas.componen
     MatFormFieldModule
   ],
   providers: [
-    HttpUtilService,
+    HttpClientModule,
   { provide: ErrorHandler, useClass: ApplicationErrorHandler },
   { provide: LOCALE_ID, useValue: 'pt-PT'},
   { provide: LocationStrategy, useClass: HashLocationStrategy }
